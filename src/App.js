@@ -7,11 +7,11 @@ import sound1 from "./sounds/mixkit-game-ball-tap-2073.wav";
 import sound2 from "./sounds/win.wav";
 import sound3 from "./sounds/lose.wav";
 import sound4 from "./sounds/draw.wav";
-import Rock from './images/Rock.jpg'
-import Paper from './images/Paper.png'
-import Scissor from './images/scissors.png'
-import User from './images/user.jpg'
-import Computer from './images/23_10_2020_17_38_04_3127622.jpg'
+import Rock from "./images/Rock.jpg";
+import Paper from "./images/Paper.png";
+import Scissor from "./images/scissors.png";
+import User from "./images/user.jpg";
+import Computer from "./images/23_10_2020_17_38_04_3127622.jpg";
 
 export default function App() {
   let array = ["Rock", "Paper", "Scissor"];
@@ -22,7 +22,7 @@ export default function App() {
   let images = {
     Rock,
     Paper,
-    Scissor
+    Scissor,
   };
   const [userScore, setUserScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
@@ -88,17 +88,17 @@ export default function App() {
     <div className="App">
       <Container>
         <Row>
-          <Col md={6}>
+          <Col xs={6}>
             <div className="play-box d-flex flex-column align-items-center p-5">
               <h3>You</h3>
-              <img src={userImage} width={500} height={500} alt="" />
+              <img src={userImage} alt="" />
               <h5 className="mt-3">Score:{userScore}</h5>
             </div>
           </Col>
-          <Col md={6}>
+          <Col xs={6}>
             <div className="play-box d-flex flex-column align-items-center p-5">
               <h3>Computer</h3>
-              <img src={computerImage} width={500} height={500} alt="" />
+              <img src={computerImage} alt="" />
               <h5 className="mt-3">Score:{computerScore}</h5>
             </div>
           </Col>
@@ -106,18 +106,18 @@ export default function App() {
         <Container className="w-50">
           <Row>
             <Col md={4}>
-              <Button className="w-100 " onClick={() => choiceHandler("Rock")}>
+              <Button className="w-100 mt-3" onClick={() => choiceHandler("Rock")}>
                 Rock
               </Button>
             </Col>
             <Col md={4}>
-              <Button className="w-100 " onClick={() => choiceHandler("Paper")}>
+              <Button className="w-100 mt-3" onClick={() => choiceHandler("Paper")}>
                 Paper
               </Button>
             </Col>
             <Col md={4}>
               <Button
-                className="w-100 "
+                className="w-100 mt-3"
                 onClick={() => choiceHandler("Scissor")}
               >
                 Scissor

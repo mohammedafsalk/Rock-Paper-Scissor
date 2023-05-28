@@ -31,6 +31,15 @@
 img {
   border-radius: 300px;
   object-fit: cover;
+  height: 400px;
+  width: 400px;
+}
+
+@media(max-width:600px){
+  img {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 @keyframes App-logo-spin {
